@@ -12,7 +12,8 @@
         color: $-Red
     }
 
-    button {
+
+    .button {
         width: 100%;
         padding: 0.625rem 0;
         border-radius: 1.25rem;
@@ -23,6 +24,8 @@
         color: $-white;
         font-weight: $fw400;
         letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
 
         &:hover{
             border-color: $-Red;
