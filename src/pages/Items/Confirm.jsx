@@ -16,12 +16,12 @@ export default function Confirm() {
                         <p>We hope you enjoy you food!</p>
 
                         <ItemsConfirmCarrinho />
-                        
+
                         <ButtonConfirms
                             frase={"Start New Order"}
-                            onclick={() => resetar(carrinho.length)} />
+                            onclick={() => resetar(carrinho.length)}
+                        />
                     </div>
-
                 </section>
             )}
         </>

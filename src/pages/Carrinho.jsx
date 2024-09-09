@@ -17,6 +17,7 @@ export default function Carrinho() {
             <ButtonConfirms
                 frase={"Confirm Order"}
                 onclick={() => validadeCarrinho(carrinho)}
+                href={"#confirm"}
             />
         </section>
     )
