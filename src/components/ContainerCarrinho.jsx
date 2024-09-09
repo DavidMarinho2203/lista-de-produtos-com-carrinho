@@ -22,7 +22,7 @@ export default function ContainerCarrinho() {
                 : (
                     <>
                         <div id="container__CarrinhoVazio">
-                            <img src="/src/assets/images/illustration-empty-cart.svg" alt="Imagem do bolo" />
+                            <img src="/assets/images/illustration-empty-cart.svg" alt="Imagem do bolo" />
                             <p>Your added items will appear here</p>
                         </div>
 
