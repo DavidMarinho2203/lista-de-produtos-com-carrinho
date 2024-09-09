@@ -4,12 +4,12 @@ import ItemsConfirmCarrinho from "../../components/ItemsConfirmCarrinho"
 import ButtonConfirms from "../../components/ButtonConfirms"
 
 export default function Confirm() {
-    const { carrinho, confirmacao, resetar, valorTotal } = useContext(ItemsContext)
+    const { carrinho, confirmacao, resetar, confirmRef} = useContext(ItemsContext)
 
     return (
         <>
             {confirmacao && (
-                <section id="confirm">
+                <section ref={confirmRef} id="confirm">
                     <div className="container__Carrinho">
                         <img src="/src/assets/images/icon-order-confirmed.svg" alt="" />
                         <h2>Order Confirmed</h2>

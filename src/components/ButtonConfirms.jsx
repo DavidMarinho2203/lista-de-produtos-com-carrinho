@@ -1,6 +1,6 @@
-export default function ButtonConfirms  ({frase,onclick,href}) {
+export default function ButtonConfirms  ({frase,onclick}) {
 
     return (
-        <a className="button" onClick={onclick} href={href}>{frase}</a>
+        <button className="button" onClick={onclick}>{frase}</button>
     )
 }
