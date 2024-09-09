@@ -1,0 +1,67 @@
+@import './Colors.scss';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+// Espessura de fonte
+$fw400: 400;
+$fw600: 600;
+$fw700: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-serif;
+    ;
+}
+
+#root {
+    background-color: $-Rose50;
+    height: 100%;
+    width: 100%;
+}
+
+@import './pages/Items.scss';
+@import './pages/Carrinho.scss';
+@import './pages/Items/Confirm.scss';
+
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1rem;
+
+    @import './pages/Items.scss';
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+
+    span {
+        color: $-Red;
+        font-weight: $fw700;
+    }
+}
+
+@media (width > 550px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (width > 768px) {
+    main {
+        grid-template-columns: 3fr 2fr;
+
+    }
+}
+
+@media (width > 950px) {
+    main {
+        grid-template-columns: 3fr 1fr;
+        padding: 3rem 3rem;
+    }
+}

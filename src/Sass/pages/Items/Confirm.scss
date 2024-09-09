@@ -1,0 +1,15 @@
+
+#confirm {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #9c9c9c88;
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    
+    @import "../../components/ItemsConfirmCarrinho.scss";
+    
+
+}
