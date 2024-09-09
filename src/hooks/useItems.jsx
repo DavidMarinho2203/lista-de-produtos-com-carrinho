@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import dadosJson from '../data.json'
 
 export default function useItems() {
@@ -6,6 +6,7 @@ export default function useItems() {
     const [carrinho, setCarrinho] = useState([]) // Estado dos items no carrinho
     const [valorTotal, setValorTotal] = useState(0) // Estado para somar valoresTotais
     const [confirmacao, setConfirmacao] = useState(false) // Estado para confirmar resetar o site
+    
 
     const renderizando = (item) => { // Estado das redenrizações das imagens da tela
         const screen = window.innerWidth
@@ -91,12 +92,23 @@ export default function useItems() {
             alert(`Ótima Compra!\nObrigado por interagir com meu site! !)`)
         }
     }
-    
+
     const validadeCarrinho = (carrinho) =>  // Validação caso queira confirma algo com carrinho vazio
-        carrinho.length == 0
-        ? alert("Adicione um item no carrinho")
-        : setConfirmacao(state => !state)
+    {
+        if (carrinho.length == 0) {
+            alert("Adicione um item no carrinho")
+        } else {
+            setConfirmacao(state => !state)
+        }
+    }
+    // buscar uma referência
+    const confirmRef = useRef(null);
 
+    useEffect(() => { // cria um efeito para quando a confirmacao == true e o confirmRef for renderizado.
+        if (confirmacao && confirmRef.current) {
+            confirmRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [confirmacao]);
 
-    return { dados, renderizando, carrinho, setCarrinho, addItemNoCarrinho, removerItemNoCarrinho, excluirItemDoCarrinho, valorTotal, confirmacao, setConfirmacao, resetar, validadeCarrinho }
+    return { dados, renderizando, carrinho, setCarrinho, addItemNoCarrinho, removerItemNoCarrinho, excluirItemDoCarrinho, valorTotal, confirmacao, setConfirmacao, resetar, validadeCarrinho, confirmRef }
 }
