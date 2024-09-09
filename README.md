@@ -29,7 +29,7 @@ Este desafio foi criado para afiar minhas habilidades de JavaScript (em especial
    **cd "caminho do local da pasta"**
 
 1. Clone o repositório:
-   git clone https://github.com/DavidMarinho2203/
+   git clone https://github.com/DavidMarinho2203/lista-de-produtos-com-carrinho
 
 2. Abre todo o arquivo no Vscode, depois abra o console do projeto e digite "npm run dev".
 
